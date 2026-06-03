@@ -1,0 +1,43 @@
+🔧 Lo único que necesitas configurar
+Al principio del código (línea ~340), encontrarás esta sección:
+
+javascript
+const dispositivos = {
+    led: {
+        ip: "192.168.1.100",    // Cambia por la IP de tu ESP del LED
+        onEndpoint: "/on",
+        offEndpoint: "/off"
+    },
+    puerta: {
+        ip: "192.168.1.101",    // Cambia por la IP de tu ESP de la puerta
+        abrirEndpoint: "/abrir"
+    },
+    algo: {
+        ip: "192.168.1.102",    // Cambia por la IP de tu ESP de "algo"
+        onEndpoint: "/encender"
+    }
+};
+Solo cambia las IPs por las de tus ESP8266 y el resto funciona solo.
+
+📱 Cómo usar
+Dispositivo	Rol	Qué hacer
+Tablet/móvil en tu casa	Receptor (USER2)	Abre el HTML, selecciona USER2, déjalo siempre encendido
+Tu móvil (fuera)	Controlador (USER1)	Abre el HTML, selecciona USER1, pulsa los botones
+🎯 Botones añadidos
+Botón	Color	Función
+💡 LED ON	Verde	Enciende el LED
+💡 LED OFF	Rojo	Apaga el LED
+🚪 ABRIR PUERTA	Azul	Abre la puerta
+⚡ ENCENDER ALGO	Morado	Controla cualquier otra cosa
+✅ Resumen
+El código ya está completo y listo para usar. Solo necesitas:
+
+Guardar este archivo como .html
+
+Cambiar las IPs de tus ESP8266
+
+Abrirlo en el navegador del móvil/tablet de casa (USER2)
+
+Abrirlo en tu móvil principal (USER1)
+
+¡Pulsar botones y controlar!
